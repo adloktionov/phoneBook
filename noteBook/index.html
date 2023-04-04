@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <title>phoneBook</title>
+</head>
+
+<body>
+    <div class="body1">
+        <div class="clock">
+            <div class="hours">
+                <div class="first">
+                    <div class="number">0</div>
+                </div>
+                <div class="second">
+                    <div class="number">0</div>
+                </div>
+            </div>
+            <div class="tick">:</div>
+            <div class="minutes">
+                <div class="first">
+                    <div class="number">0</div>
+                </div>
+                <div class="second">
+                    <div class="number">0</div>
+                </div>
+            </div>
+            <div class="tick">:</div>
+            <div class="seconds">
+                <div class="first">
+                    <div class="number">0</div>
+                </div>
+                <div class="second infinite">
+                    <div class="number">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КОНЕЦ ЧАСОВ -->
+
+    <!-- КАЛЕНДАРЬ -->
+    <div class="calendar-body">
+
+        <div class="calendar-wrapper">
+            <button id="btnPrev" type="button">Предыдущий</button>
+            <button id="btnNext" type="button">Следующий</button>
+            <div id="divCal"></div>
+        </div>
+    </div>
+
+    <!-- ПАФОСНАЯ ПАНЕЛЬ ЛОГИНА -->
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Password</label>
+            </div>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+        </form>
+    </div>
+
+
+    <p style="font-size: 1.000em;"></p>
+    <div id="phonebook">
+        <form id="search">
+            <input class="form-control" id="inputSearch" placeholder="Ты что-то ищешь, братишка?" style="width: 74%;"
+                type="search" /><input class="btn btn-success" disabled="" id="buttonReset" style="width: 24%;"
+                type="button" value="Reset" />
+        </form>
+
+        <form id="phonebook__form" novalidate="">
+            <div id="phonebook__form__adder">
+                <input autocomplete="off" class="form-control" id="inputName" placeholder="Введи имя" type="text" />
+
+                <input autocomplete="off" class="form-control" disabled="" id="inputTel"
+                    placeholder="Введи номер телефона" type="tel" />
+
+                <input autocomplete="off" class="form-control" disabled="" id="inputEmail" placeholder="Введи почту"
+                    type="email" />
+                <input autocomplete="off" class="form-control" disabled="" id="inputGroup" placeholder="Введи группу"
+                    type="text" />
+
+                <input class="btn btn-success" disabled="" id="buttonAdd" type="button" value="Добавить контакт" />
+            </div>
+
+        </form>
+        <table id="phonebook__result" style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <td style="padding: .500em;">
+                        <span style="display: inline-block; float: left;"> Имя </span>
+                        <div style="display: inline-block; float: right;">
+                            <div style="font-size: .500em;">
+                            </div>
+
+                            <div style="font-size: .500em;">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        Телефон
+                    </td>
+                    <td>
+                        Email почта
+                    </td>
+
+                    <td>
+                        Группа
+                    </td>
+
+
+                    <td>
+                        Действия
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
